@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products — Elly Smart Gadgets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">ELLY SMART<span> GADGETS</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <form class="search-form" onsubmit="event.preventDefault()">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search products...">
+                    <button type="button" class="search-btn" onclick="searchProducts()" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <a href="cart.html" class="nav-link cart-icon ms-1" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1>All Products</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Products</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- Promo Alert -->
+<div class="container mt-4">
+    <div class="alert alert-success d-flex align-items-center gap-2 flex-wrap">
+        <i class="fas fa-gift fa-lg flex-shrink-0"></i>
+        <span><strong>Special Offer:</strong> Buy 2 items and get 10% off! Free delivery on orders over USh 350,000.</span>
+    </div>
+</div>
+
+<!-- Products Grid -->
+<section class="section">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Earbuds -->
+            <div class="col-6 col-md-4 product-item">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/earbuds.jpg" class="product-img" alt="Elly Pro Earbuds" onerror="this.src='https://placehold.co/300x210/0a2b3e/e6b91e?text=Earbuds'">
+                        <span class="badge-new">Popular</span>
+                        <div class="product-img-overlay">
+                            <a href="product-detail.html?id=earbuds" class="btn btn-gold" style="font-size:0.82rem;padding:8px 18px;">
+                                <i class="fas fa-eye me-1"></i>Quick View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Elly Pro Earbuds</h5>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-muted">(4.8)</span>
+                        </div>
+                        <p class="card-text">Premium sound, ANC, 20-hr battery, IPX4 splash-proof.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <div class="price">USh 50,000</div>
+                                <small class="price-old">USh 65,000</small>
+                            </div>
+                            <button class="btn btn-teal" onclick="addToCart('earbuds','Elly Pro Earbuds',50000,'images/earbuds.jpg')">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <a href="product-detail.html?id=earbuds" class="btn btn-outline-teal w-100 mt-2" style="font-size:0.83rem;padding:6px;">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Watch -->
+            <div class="col-6 col-md-4 product-item">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/watch.jpg" class="product-img" alt="Elly Ultra Watch" onerror="this.src='https://placehold.co/300x210/0a2b3e/e6b91e?text=Watch'">
+                        <span class="badge-new badge-gold">Best Seller</span>
+                        <div class="product-img-overlay">
+                            <a href="product-detail.html?id=watch" class="btn btn-gold" style="font-size:0.82rem;padding:8px 18px;">
+                                <i class="fas fa-eye me-1"></i>Quick View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Elly Ultra Watch</h5>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-muted">(5.0)</span>
+                        </div>
+                        <p class="card-text">GPS, heart rate, sleep tracking, 7-day battery, 5ATM.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="price">USh 35,000</div>
+                            <button class="btn btn-teal" onclick="addToCart('watch','Elly Ultra Watch',35000,'images/watch.jpg')">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <a href="product-detail.html?id=watch" class="btn btn-outline-teal w-100 mt-2" style="font-size:0.83rem;padding:6px;">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camera -->
+            <div class="col-6 col-md-4 product-item">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/camera.jpg" class="product-img" alt="Elly Smart Camera" onerror="this.src='https://placehold.co/300x210/0a2b3e/e6b91e?text=Camera'">
+                        <div class="product-img-overlay">
+                            <a href="product-detail.html?id=camera" class="btn btn-gold" style="font-size:0.82rem;padding:8px 18px;">
+                                <i class="fas fa-eye me-1"></i>Quick View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Elly Smart Camera</h5>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-muted">(4.7)</span>
+                        </div>
+                        <p class="card-text">1080p HD, colour night vision, AI motion alerts, IP67.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <div class="price">USh 350,000</div>
+                                <small class="price-old">USh 420,000</small>
+                            </div>
+                            <button class="btn btn-teal" onclick="addToCart('camera','Elly Smart Camera',350000,'images/camera.jpg')">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <a href="product-detail.html?id=camera" class="btn btn-outline-teal w-100 mt-2" style="font-size:0.83rem;padding:6px;">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Laptop -->
+            <div class="col-6 col-md-4 product-item">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/laptop.jpg" class="product-img" alt="Elly Laptop" onerror="this.src='https://placehold.co/300x210/0a2b3e/e6b91e?text=Laptop'">
+                        <span class="badge-new badge-gold">Top Pick</span>
+                        <div class="product-img-overlay">
+                            <a href="product-detail.html?id=laptop" class="btn btn-gold" style="font-size:0.82rem;padding:8px 18px;">
+                                <i class="fas fa-eye me-1"></i>Quick View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Elly Laptop</h5>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-muted">(4.9)</span>
+                        </div>
+                        <p class="card-text">Intel i5, 8GB RAM, 256GB SSD, 14" FHD IPS, 8hr battery.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="price">USh 500,000</div>
+                            <button class="btn btn-teal" onclick="addToCart('laptop','Elly Laptop',500000,'images/laptop.jpg')">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <a href="product-detail.html?id=laptop" class="btn btn-outline-teal w-100 mt-2" style="font-size:0.83rem;padding:6px;">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="col-6 col-md-4 product-item">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/phone.jpg" class="product-img" alt="Elly Smart Phone" onerror="this.src='https://placehold.co/300x210/0a2b3e/e6b91e?text=Phone'">
+                        <div class="product-img-overlay">
+                            <a href="product-detail.html?id=phone" class="btn btn-gold" style="font-size:0.82rem;padding:8px 18px;">
+                                <i class="fas fa-eye me-1"></i>Quick View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Elly Smart Phone</h5>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-muted">(4.8)</span>
+                        </div>
+                        <p class="card-text">48MP triple cam, 5000mAh, 33W fast charge, 6.5" 90Hz.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <div class="price">USh 250,000</div>
+                                <small class="price-old">USh 299,000</small>
+                            </div>
+                            <button class="btn btn-teal" onclick="addToCart('phone','Elly Smart Phone',250000,'images/phone.jpg')">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <a href="product-detail.html?id=phone" class="btn btn-outline-teal w-100 mt-2" style="font-size:0.83rem;padding:6px;">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Power Bank -->
+            <div class="col-6 col-md-4 product-item">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/powerbank.jpg" class="product-img" alt="Elly Power Bank" onerror="this.src='https://placehold.co/300x210/0a2b3e/e6b91e?text=PowerBank'">
+                        <span class="badge-new">New</span>
+                        <div class="product-img-overlay">
+                            <a href="product-detail.html?id=powerbank" class="btn btn-gold" style="font-size:0.82rem;padding:8px 18px;">
+                                <i class="fas fa-eye me-1"></i>Quick View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Elly Power Bank</h5>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-muted">(4.5)</span>
+                        </div>
+                        <p class="card-text">20,000mAh, 22.5W fast charge, USB-C + dual USB-A.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <div class="price">USh 45,000</div>
+                                <small class="price-old">USh 55,000</small>
+                            </div>
+                            <button class="btn btn-teal" onclick="addToCart('powerbank','Elly Power Bank',45000,'images/powerbank.jpg')">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <a href="product-detail.html?id=powerbank" class="btn btn-outline-teal w-100 mt-2" style="font-size:0.83rem;padding:6px;">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /row -->
+
+        <div id="noResults" class="no-results mt-4" style="display:none;">
+            <i class="fas fa-search fa-3x mb-3 d-block"></i>
+            <h4>No products found</h4>
+            <p class="text-muted">Try a different search term</p>
+        </div>
+    </div>
+</section>
+
+<!-- Catalog Table -->
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="page-title">Complete Catalog</h2>
+        <div class="table-responsive">
+            <table class="table specs-table">
+                <thead>
+                    <tr><th>Product</th><th>Category</th><th>Price</th><th>Rating</th><th class="d-none d-md-table-cell">Details</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Elly Pro Earbuds</strong></td><td>Audio</td>
+                        <td class="price-cell">USh 50,000</td><td><span style="color:#f59e0b;">★</span> 4.8</td>
+                        <td class="d-none d-md-table-cell"><a href="product-detail.html?id=earbuds" class="btn-outline-teal" style="font-size:0.78rem;padding:4px 12px;border-radius:20px;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Elly Ultra Watch</strong></td><td>Wearable</td>
+                        <td class="price-cell">USh 35,000</td><td><span style="color:#f59e0b;">★</span> 5.0</td>
+                        <td class="d-none d-md-table-cell"><a href="product-detail.html?id=watch" class="btn-outline-teal" style="font-size:0.78rem;padding:4px 12px;border-radius:20px;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Elly Smart Camera</strong></td><td>Security</td>
+                        <td class="price-cell">USh 350,000</td><td><span style="color:#f59e0b;">★</span> 4.7</td>
+                        <td class="d-none d-md-table-cell"><a href="product-detail.html?id=camera" class="btn-outline-teal" style="font-size:0.78rem;padding:4px 12px;border-radius:20px;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Elly Laptop</strong></td><td>Computing</td>
+                        <td class="price-cell">USh 500,000</td><td><span style="color:#f59e0b;">★</span> 4.9</td>
+                        <td class="d-none d-md-table-cell"><a href="product-detail.html?id=laptop" class="btn-outline-teal" style="font-size:0.78rem;padding:4px 12px;border-radius:20px;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Elly Smart Phone</strong></td><td>Mobile</td>
+                        <td class="price-cell">USh 250,000</td><td><span style="color:#f59e0b;">★</span> 4.8</td>
+                        <td class="d-none d-md-table-cell"><a href="product-detail.html?id=phone" class="btn-outline-teal" style="font-size:0.78rem;padding:4px 12px;border-radius:20px;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Elly Power Bank</strong></td><td>Accessories</td>
+                        <td class="price-cell">USh 45,000</td><td><span style="color:#f59e0b;">★</span> 4.5</td>
+                        <td class="d-none d-md-table-cell"><a href="product-detail.html?id=powerbank" class="btn-outline-teal" style="font-size:0.78rem;padding:4px 12px;border-radius:20px;">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-md-4">
+                <div class="footer-brand">ELLY SMART<span> GADGETS</span></div>
+                <p>Your trusted partner for smart electronics in Uganda. Quality devices, honest prices.</p>
+                <div class="social-icons mt-3">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right me-1"></i>Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right me-1"></i>About Us</a></li>
+                    <li><a href="services.html"><i class="fas fa-chevron-right me-1"></i>Services</a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-right me-1"></i>Products</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right me-1"></i>Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Mbarara-Kampala, Uganda</li>
+                    <li><i class="fas fa-phone"></i> +256 744 906 952</li>
+                    <li><i class="fas fa-envelope"></i> info@ellygadgets.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Elly Smart Gadgets. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

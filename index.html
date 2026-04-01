@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elly Smart Gadgets — Uganda's #1 Smart Electronics Store</title>
+    <meta name="description" content="Shop premium smartphones, smartwatches, earbuds, laptops and more at Elly Smart Gadgets. Best prices in Uganda with 6-month warranty and free delivery.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">ELLY SMART<span> GADGETS</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <form class="search-form" onsubmit="event.preventDefault()">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search products...">
+                    <button type="button" class="search-btn" onclick="searchProducts()" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <a href="cart.html" class="nav-link cart-icon ms-1" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content text-center">
+        <p class="hero-eyebrow">Uganda's #1 Smart Electronics Store</p>
+        <h1>Smart Gadgets for a<br><span class="hero-highlight">Smarter Life</span></h1>
+        <p class="lead">Premium Electronics &bull; Cutting-Edge Technology &bull; Best Prices</p>
+        <div class="hero-actions">
+            <a href="products.html" class="btn btn-gold btn-lg">
+                Shop Now <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+            <a href="about.html" class="btn btn-outline-light btn-lg">
+                Learn More
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Bar -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="row g-0 text-center">
+            <div class="col-6 col-md-3 stat-item">
+                <div class="stat-number">2,400+</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Products</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <div class="stat-number">6 Months</div>
+                <div class="stat-label">Warranty</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Elly -->
+<section class="section">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h2 class="page-title">Why Choose Elly?</h2>
+                <p class="text-muted mb-4">We provide smartphones, smartwatches, laptops, and home automation tools. Our mission is to simplify your life through intelligent devices at prices that make sense.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-headset"></i>
+                        <div><strong>24/7 Customer Support</strong><br><small class="text-muted">Always here when you need us</small></div>
+                    </li>
+                    <li>
+                        <i class="fas fa-shield-alt"></i>
+                        <div><strong>6-Month Warranty</strong><br><small class="text-muted">Peace of mind on every purchase</small></div>
+                    </li>
+                    <li>
+                        <i class="fas fa-truck"></i>
+                        <div><strong>Free Delivery over USh 350,000</strong><br><small class="text-muted">Delivered straight to your door</small></div>
+                    </li>
+                    <li>
+                        <i class="fas fa-undo-alt"></i>
+                        <div><strong>14-Day Money-Back Guarantee</strong><br><small class="text-muted">Not satisfied? We'll refund you</small></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image-wrap">
+                    <img src="images/poster.png" alt="Elly Smart Gadgets product showcase" class="about-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shop by Category -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>Shop by Category</h2>
+            <p>Find exactly what you're looking for across our product range</p>
+        </div>
+        <div class="row g-3 justify-content-center">
+            <div class="col-6 col-sm-3">
+                <a href="products.html" class="category-card">
+                    <div class="category-icon"><i class="fas fa-headphones-alt"></i></div>
+                    <span>Audio</span>
+                </a>
+            </div>
+            <div class="col-6 col-sm-3">
+                <a href="products.html" class="category-card">
+                    <div class="category-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <span>Smartphones</span>
+                </a>
+            </div>
+            <div class="col-6 col-sm-3">
+                <a href="products.html" class="category-card">
+                    <div class="category-icon"><i class="fas fa-clock"></i></div>
+                    <span>Smartwatches</span>
+                </a>
+            </div>
+            <div class="col-6 col-sm-3">
+                <a href="products.html" class="category-card">
+                    <div class="category-icon"><i class="fas fa-video"></i></div>
+                    <span>Cameras</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="section">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <h2 class="page-title mb-0">Featured Products</h2>
+            <a href="products.html" class="btn-outline-gold">
+                View All <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+        </div>
+        <div class="row g-4">
+
+            <!-- Earbuds -->
+            <div class="col-6 col-md-4 product-item">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/earbuds.jpg" class="product-img" alt="Elly Pro Earbuds">
+                        <span class="badge-new">Popular</span>
+                        <div class="product-img-overlay">
+                            <a href="product-detail.html?id=earbuds" class="btn btn-gold" style="font-size:0.82rem;padding:8px 18px;">
+                                <i class="fas fa-eye me-1"></i>Quick View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Elly Pro Earbuds</h5>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-muted">(4.8)</span>
+                        </div>
+                        <p class="card-text">Premium sound, ANC, 20-hr battery, IPX4.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <div class="price">USh 50,000</div>
+                                <small class="price-old">USh 65,000</small>
+                            </div>
+                            <button class="btn btn-teal" onclick="addToCart('earbuds','Elly Pro Earbuds',50000,'images/earbuds.jpg')">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <a href="product-detail.html?id=earbuds" class="btn btn-outline-teal w-100 mt-2" style="font-size:0.83rem;padding:6px;">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Watch -->
+            <div class="col-6 col-md-4 product-item">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/watch.jpg" class="product-img" alt="Elly Ultra Watch">
+                        <span class="badge-new badge-gold">Best Seller</span>
+                        <div class="product-img-overlay">
+                            <a href="product-detail.html?id=watch" class="btn btn-gold" style="font-size:0.82rem;padding:8px 18px;">
+                                <i class="fas fa-eye me-1"></i>Quick View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Elly Ultra Watch</h5>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-muted">(5.0)</span>
+                        </div>
+                        <p class="card-text">GPS, heart rate, sleep tracking, 7-day battery.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="price">USh 35,000</div>
+                            <button class="btn btn-teal" onclick="addToCart('watch','Elly Ultra Watch',35000,'images/watch.jpg')">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <a href="product-detail.html?id=watch" class="btn btn-outline-teal w-100 mt-2" style="font-size:0.83rem;padding:6px;">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camera -->
+            <div class="col-6 col-md-4 product-item">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/camera.jpg" class="product-img" alt="Elly Smart Camera">
+                        <div class="product-img-overlay">
+                            <a href="product-detail.html?id=camera" class="btn btn-gold" style="font-size:0.82rem;padding:8px 18px;">
+                                <i class="fas fa-eye me-1"></i>Quick View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Elly Smart Camera</h5>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-muted">(4.7)</span>
+                        </div>
+                        <p class="card-text">1080p HD, night vision, AI alerts, IP67.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <div class="price">USh 350,000</div>
+                                <small class="price-old">USh 420,000</small>
+                            </div>
+                            <button class="btn btn-teal" onclick="addToCart('camera','Elly Smart Camera',350000,'images/camera.jpg')">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                        <a href="product-detail.html?id=camera" class="btn btn-outline-teal w-100 mt-2" style="font-size:0.83rem;padding:6px;">
+                            <i class="fas fa-info-circle me-1"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="noResults" class="no-results mt-4" style="display:none;">
+            <i class="fas fa-search fa-3x mb-3 d-block"></i>
+            <h4>No products found</h4>
+            <p class="text-muted">Try a different search term</p>
+        </div>
+    </div>
+</section>
+
+<!-- Promo Banner -->
+<section class="promo-banner">
+    <div class="container text-center" style="position:relative;z-index:1;">
+        <i class="fas fa-truck fa-2x mb-3 d-block" style="opacity:0.85;"></i>
+        <h3>Free Delivery on Orders Over USh 350,000</h3>
+        <p class="mb-4" style="opacity:0.8;">Shop more, save more. Delivered anywhere across Uganda.</p>
+        <a href="products.html" class="btn btn-gold btn-lg">
+            Browse All Products <i class="fas fa-arrow-right ms-1"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-md-4">
+                <div class="footer-brand">ELLY SMART<span> GADGETS</span></div>
+                <p>Your trusted partner for smart electronics in Uganda. Quality devices, honest prices.</p>
+                <div class="social-icons mt-3">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right me-1"></i>Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right me-1"></i>About Us</a></li>
+                    <li><a href="services.html"><i class="fas fa-chevron-right me-1"></i>Services</a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-right me-1"></i>Products</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right me-1"></i>Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Mbarara-Kampala, Uganda</li>
+                    <li><i class="fas fa-phone"></i> +256 744 906 952</li>
+                    <li><i class="fas fa-envelope"></i> info@ellygadgets.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Elly Smart Gadgets. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
